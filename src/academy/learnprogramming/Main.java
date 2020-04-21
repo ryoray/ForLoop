@@ -24,9 +24,15 @@ public class Main {
         System.out.println(isPrime(7));
 
         System.out.println("===============================");
-        for (int i=2; i<=3; i++) {
-            if (isPrime(i)){
-                System.out.println(i);
+        int count = 0;
+        for (int i=0; i<=30; i++) {
+            if (isPrime(i)) {
+                count++;
+                System.out.println("The number " + i + " is a prime number");
+                if (count == 3) {
+                    System.out.println("Exiting for loop");
+                    break;
+                }
             }
         }
     }
@@ -36,7 +42,7 @@ public class Main {
     }
 
     public static boolean isPrime (int n) {
-        if (n == 1) {
+        if (n < 1 || n == 1) {
             return false;
         }
 
