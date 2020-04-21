@@ -8,6 +8,8 @@ public class Main {
         System.out.println("10,000 at 4% interest = " + calculateInterest(10000, 4));
         System.out.println("10,000 at 5% interest = " + calculateInterest(10000, 5));
 
+        System.out.println("===============================");
+
         //for(init; termination; increment){
         //
         //}
@@ -16,9 +18,27 @@ public class Main {
 //            System.out.println("Loop "+i+ " Hello!");
             System.out.println("10,000 at "+ i + "% interest = "+ calculateInterest(10000,i));
         }
+
+        System.out.println("===============================");
+
+        System.out.println(isPrime(7));
     }
 
     public static double calculateInterest (double amount, double interestRate) {
         return (amount * (interestRate / 100));
+    }
+
+    public static boolean isPrime (int n) {
+        if (n == 1) {
+            return false;
+        }
+
+        for (int i=2; i<=n/2; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
