@@ -22,6 +22,13 @@ public class Main {
         System.out.println("===============================");
 
         System.out.println(isPrime(7));
+
+        System.out.println("===============================");
+        for (int i=2; i<=3; i++) {
+            if (isPrime(i)){
+                System.out.println(i);
+            }
+        }
     }
 
     public static double calculateInterest (double amount, double interestRate) {
